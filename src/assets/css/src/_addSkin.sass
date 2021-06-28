@@ -1,0 +1,71 @@
+.addSkin-container
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding-top: 150px
+    h1
+        font-size: 78px
+        text-transform: uppercase
+        color: $red
+    form
+        width: 30%
+        .form-group
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 50px auto
+            input[type=text]
+                padding: 10px 20px 10px 5px
+                border: none
+                width: 100%
+                outline: none
+                font-family: 'Oswald', sans-serif
+                text-transform: uppercase
+                letter-spacing: 3px
+                font-weight: 700
+                background: #ece8e1
+                border-bottom: 2px solid #c7c4be
+                &::placeholder
+                    color: #c7c4be
+                    opacity: 1
+        .addSkin-submit
+            margin: 0 auto
+            position: relative
+            font-size: 14px
+            cursor: pointer
+            background: $red
+            color: #ece8e1
+            font-weight: 700
+            text-transform: uppercase
+            letter-spacing: 2px
+            border: 1px solid $red
+            padding: 15px 40px
+            font-family: 'Oswald', sans-serif
+            transition: 0.3s
+            display: flex
+            justify-content: center
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                height: calc(70% - .4rem)
+                width: 110%
+                border: 1px solid #00000080
+                top: -10px
+                border-bottom: 0
+            &::after
+                content: ""
+                display: block
+                position: absolute
+                height: calc(70% - .4rem)
+                width: 110%
+                border: 1px solid #00000080
+                bottom: -10px
+                border-top: 0
+            &:hover
+                border: 1px solid black
+                background: #ece8e1
+                color: black
+                text-decoration: none

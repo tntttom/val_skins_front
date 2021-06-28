@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap");
+body {
+  background-color: #ece8e1;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+}
+.main-container .collection-list-container h1 {
+  font-size: 78px;
+  text-transform: uppercase;
+  color: #ff4655;
+}
+.main-container .collection-list-container .collection-list {
+  margin-top: 72px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-container .collection-list-container .collection-list .collection-list-item {
+  margin: 40px 0;
+  text-decoration: none;
+  color: black;
+}
+.main-container .collection-list-container .collection-list .collection-list-item h3 {
+  position: relative;
+  font-size: 32px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+}
+.main-container .collection-list-container .collection-list .collection-list-item h3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: 1px solid transparent;
+  top: -10px;
+  border-bottom: 0;
+  transition: 0.3s;
+}
+.main-container .collection-list-container .collection-list .collection-list-item h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: 1px solid transparent;
+  bottom: -10px;
+  border-top: 0;
+  transition: 0.3s;
+}
+.main-container .collection-list-container .collection-list .collection-list-item h3:hover {
+  color: #ff4655;
+}
+.main-container .collection-list-container .collection-list .collection-list-item h3:hover::before {
+  height: calc(70% - .4rem);
+  width: 130%;
+  border: 1px solid #ff4655;
+  top: -10px;
+  border-bottom: 0;
+}
+.main-container .collection-list-container .collection-list .collection-list-item h3:hover::after {
+  height: calc(70% - .4rem);
+  width: 130%;
+  border: 1px solid #ff4655;
+  bottom: -10px;
+  border-top: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.collectionDetails {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.collectionDetails .collectionDetails-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.collectionDetails .collectionDetails-header h1 {
+  font-size: 72px;
+  text-transform: uppercase;
+}
+.collectionDetails .collectionDetails-header p {
+  font-size: 14px;
+}
+.collectionDetails .collectionDetails-list {
+  padding: 50px 0;
+}
+.collectionDetails .collectionDetails-list .collectionDetails-skin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 40px 0;
+}
+.collectionDetails .collectionDetails-list .collectionDetails-skin h3 {
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-text-stroke-color: #c7c4be;
+  -webkit-text-fill-color: #dbd8d2;
+  -webkit-text-stroke-width: 1px;
+  font-size: calc( 16vw - 12px);
+  z-index: -1;
+  letter-spacing: 3vw;
+}
+.collectionDetails .collectionDetails-list .collectionDetails-skin h3::selection {
+  background: #000;
+}
+.collectionDetails .collectionDetails-list .collectionDetails-skin img {
+  max-width: 75%;
+  position: absolute;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  animation: fadeUp 1s ease;
+  animation-fill-mode: forwards;
+}
+.collectionDetails .collectionDetails-addSkin {
+  margin: 100px 0;
+}
+.collectionDetails .collectionDetails-addSkin a {
+  text-decoration: none;
+}
+.collectionDetails .collectionDetails-addSkin button {
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  background: #ff4655;
+  color: #ece8e1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid #ff4655;
+  padding: 15px 40px;
+  font-family: "Oswald", sans-serif;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+}
+.collectionDetails .collectionDetails-addSkin button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: calc(70% - .4rem);
+  width: 110%;
+  border: 1px solid #00000080;
+  top: -10px;
+  border-bottom: 0;
+}
+.collectionDetails .collectionDetails-addSkin button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: calc(70% - .4rem);
+  width: 110%;
+  border: 1px solid #00000080;
+  bottom: -10px;
+  border-top: 0;
+}
+.collectionDetails .collectionDetails-addSkin button:hover {
+  border: 1px solid black;
+  background: #ece8e1;
+  color: black;
+  text-decoration: none;
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.addSkin-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+}
+.addSkin-container h1 {
+  font-size: 78px;
+  text-transform: uppercase;
+  color: #ff4655;
+}
+.addSkin-container form {
+  width: 30%;
+}
+.addSkin-container form .form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+.addSkin-container form .form-group input[type=text] {
+  padding: 10px 20px 10px 5px;
+  border: none;
+  width: 100%;
+  outline: none;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  background: #ece8e1;
+  border-bottom: 2px solid #c7c4be;
+}
+.addSkin-container form .form-group input[type=text]::placeholder {
+  color: #c7c4be;
+  opacity: 1;
+}
+.addSkin-container form .addSkin-submit {
+  margin: 0 auto;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  background: #ff4655;
+  color: #ece8e1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid #ff4655;
+  padding: 15px 40px;
+  font-family: "Oswald", sans-serif;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+}
+.addSkin-container form .addSkin-submit::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: calc(70% - .4rem);
+  width: 110%;
+  border: 1px solid #00000080;
+  top: -10px;
+  border-bottom: 0;
+}
+.addSkin-container form .addSkin-submit::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: calc(70% - .4rem);
+  width: 110%;
+  border: 1px solid #00000080;
+  bottom: -10px;
+  border-top: 0;
+}
+.addSkin-container form .addSkin-submit:hover {
+  border: 1px solid black;
+  background: #ece8e1;
+  color: black;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=output.css.map */

@@ -1,0 +1,99 @@
+*
+    margin: 0
+    padding: 0
+
+.collectionDetails
+    max-width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    .collectionDetails-header
+        text-align: center
+        margin: 0 auto
+        padding: 50px 0
+        h1
+            font-size: 72px
+            text-transform: uppercase
+        p
+            font-size: 14px
+    .collectionDetails-list
+        padding: 50px 0
+        .collectionDetails-skin
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            position: relative
+            margin: 40px 0
+            h3
+                text-align: center
+                text-transform: uppercase
+                -webkit-text-stroke-color: #c7c4be
+                -webkit-text-fill-color: #dbd8d2
+                -webkit-text-stroke-width: 1px
+                font-size: calc( 16vw - 12px)
+                z-index: -1
+                letter-spacing: 3vw
+                &::selection
+                    background: #000
+            img
+                max-width: 75%
+                position: absolute
+                user-drag: none
+                user-select: none
+                -moz-user-select: none
+                -webkit-user-drag: none
+                -webkit-user-select: none
+                -ms-user-select: none
+                animation: fadeUp 1s ease
+                animation-fill-mode: forwards
+    .collectionDetails-addSkin
+        margin: 100px 0
+        a
+            text-decoration: none
+        button
+            position: relative
+            font-size: 14px
+            cursor: pointer
+            background: $red
+            color: #ece8e1
+            font-weight: 700
+            text-transform: uppercase
+            letter-spacing: 2px
+            border: 1px solid $red
+            padding: 15px 40px
+            font-family: 'Oswald', sans-serif
+            transition: 0.3s
+            display: flex
+            justify-content: center
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                height: calc(70% - .4rem)
+                width: 110%
+                border: 1px solid #00000080
+                top: -10px
+                border-bottom: 0
+            &::after
+                content: ""
+                display: block
+                position: absolute
+                height: calc(70% - .4rem)
+                width: 110%
+                border: 1px solid #00000080
+                bottom: -10px
+                border-top: 0
+            &:hover
+                border: 1px solid black
+                background: #ece8e1
+                color: black
+                text-decoration: none
+
+@keyframes fadeUp
+    0%
+        transform: translateY(200px)
+        opacity: 0
+    100%
+        opacity: 1
+        transform: translateY(0)

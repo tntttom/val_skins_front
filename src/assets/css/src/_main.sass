@@ -1,0 +1,64 @@
+.main-container
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 150px
+    .collection-list-container
+        h1
+            font-size: 78px
+            text-transform: uppercase
+            color: $red
+        .collection-list
+            margin-top: 72px
+            width: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            .collection-list-item
+                margin: 40px 0
+                text-decoration: none
+                color: black
+                h3
+                    position: relative
+                    font-size: 32px
+                    letter-spacing: 5px
+                    text-transform: uppercase
+                    display: flex
+                    justify-content: center
+                    transition: 0.3s
+                    &::before
+                        content: ""
+                        display: block
+                        position: absolute
+                        height: 0
+                        width: 0
+                        border: 1px solid transparent
+                        top: -10px
+                        border-bottom: 0
+                        transition: 0.3s
+                    &::after
+                        content: ""
+                        display: block
+                        position: absolute
+                        height: 0
+                        width: 0
+                        border: 1px solid transparent
+                        bottom: -10px
+                        border-top: 0
+                        transition: 0.3s
+                    &:hover
+                        color: $red
+                        &::before
+                            height: calc(70% - .4rem)
+                            width: 130%
+                            border: 1px solid $red
+                            top: -10px
+                            border-bottom: 0
+                        &::after
+                            height: calc(70% - .4rem)
+                            width: 130%
+                            border: 1px solid $red
+                            bottom: -10px
+                            border-top: 0
